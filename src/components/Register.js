@@ -76,7 +76,7 @@ const Register = ({ handleChange, userDetails }) => {
           type="phone"
           required
           placeholder="phone...."
-          name="email"
+          name="phone"
         />
         <StyledInput
           onChange={handleChange}
@@ -94,7 +94,7 @@ const Register = ({ handleChange, userDetails }) => {
         />
         <input type="checkbox" id="alerts"></input>
         <label for="alerts">Subscribe for SMS Alerts</label>
-        <StyledButton type="submit">Register</StyledButton>
+        <StyledButton type="submit" onClick={handleSubmit}>Register</StyledButton>
       </StyledForm>
       <Link to="/login">Already a member? Login here.</Link>
     </Container>
