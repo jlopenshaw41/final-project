@@ -7,7 +7,7 @@ const Nav = styled.nav`
   background: #fff;
   height: 80px;
   display: flex;
-  justify-content: fex-start;
+  justify-content: flex-start;
   border-bottom: 1px solid #454545;
   padding: 0.5rem calc((100vw - 1000px) / 2);
   z-index: 10;
@@ -56,7 +56,13 @@ const NavMenu = styled.div`
   }
 `;
 
-const NavBtn = styled.nav`
+const Logo = styled.img`
+  margin: auto;
+  width: 200px;
+  height: 50px
+`;
+
+/*const NavBtn = styled.nav`
   display: flex;
   align-items: center;
   margin-right: 24px;
@@ -83,32 +89,37 @@ const NavBtnLink = styled(Link)`
         background: #fff;
         color: #427314;
     }
-`;
+`;*/
 const Navbar = () => {
   return (
     <>
       <Nav>
         <NavLink to="/">
-          <h1>Logo</h1>
+        <Logo 
+          className="logo"
+          src="https://www.reactive.energy/images/assets/logo-green.png"
+          alt="logo">
+        </Logo>
         </NavLink>
         <Bars />
         <NavMenu>
           <NavLink to="/about" activeStyle>
             About
           </NavLink>
-          <NavLink to="/contact-us" activeStyle>
+          <NavLink to="/contact" activeStyle>
             Contact Us
           </NavLink>
-          <NavLink to="/sign-up" activeStyle>
-            Sign Up
+          <NavLink to="/login" activeStyle>
+            Sign In
           </NavLink>
         </NavMenu>
-        <NavBtn>
-          <NavBtnLink to="/sign-in">Sign In</NavBtnLink>
-        </NavBtn>
       </Nav>
     </>
   );
 };
 
 export default Navbar;
+
+//<NavBtn>
+//<NavBtnLink to="/signin">Sign In</NavBtnLink>
+//</NavBtn>
