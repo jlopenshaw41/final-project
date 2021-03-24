@@ -92,8 +92,6 @@ const Register = ({ handleChange, userDetails }) => {
           placeholder="confirm password..."
           name="confirmPassword"
         />
-        <input type="checkbox" id="alerts"></input>
-        <label for="alerts">Subscribe for SMS Alerts</label>
         <StyledButton type="submit" onClick={handleSubmit}>Register</StyledButton>
       </StyledForm>
       <Link to="/login">Already a member? Login here.</Link>

@@ -2,13 +2,14 @@ import axios from "axios";
 
 const login = (user, setUserAccount, setRedirect) => {
   axios
-    .post("http://127.0.0.1:3000/signin", {
+    .post("http://localhost:4000/app/signup", {
       email: user.email,
       password: user.password,
     })
     .then((res) => {
-      setUserAccount(res);
-      setRedirect(true);
+      console.log("res from login", res);
+    //  setUserAccount(res);
+    //  setRedirect(true);
     })
     .catch((err) => {
       console.error(err);
