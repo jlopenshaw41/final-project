@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import Navbar from "./components/Navbar";
+//import Navbar from "./components/Navbar";
+import { NavBar } from "./components/navbar/index"
 import Home from "./components/Home";
 import About from "./components/About";
+import EnergyMix from "./components/EnergyMix"
 import Contact from "./components/Contact";
 import Register from "./components/Register";
 import Login from "./components/Login";
@@ -14,6 +16,7 @@ function App() {
   const [userDetails, setUserDetails] = useState({
     email: "",
     phone: "",
+    subscribe: "false",
     password: "",
     confirmPassword: "",
   });
@@ -31,10 +34,12 @@ function App() {
   //console.log({ userAccount });
 
   return (
+    <>
     <Router>
-      <Navbar />
+      <NavBar />
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/energymix" component={EnergyMix} />
         <Route exact path="/about" component={About} />
         <Route exact path="/contact" component={Contact} />
         <Route
@@ -71,6 +76,7 @@ function App() {
         />
       </Switch>
     </Router>
+    </>
   );
 }
 

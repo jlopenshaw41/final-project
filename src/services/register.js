@@ -5,6 +5,7 @@ const register = (user) => {
     email: user.email,
     password: user.password,
     phone: user.phone,
+    subscribe: user.subscribe,
   };
 
 //  let config = {

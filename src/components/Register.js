@@ -92,6 +92,14 @@ const Register = ({ handleChange, userDetails }) => {
           placeholder="confirm password..."
           name="confirmPassword"
         />
+        <StyledInput
+          onChange={handleChange}
+          type="checkbox"
+          required
+          placeholder="subscribe"
+          name="subscribe"
+          value="true"
+        />
         <StyledButton type="submit" onClick={handleSubmit}>Register</StyledButton>
       </StyledForm>
       <Link to="/login">Already a member? Login here.</Link>
