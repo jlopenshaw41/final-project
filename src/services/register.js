@@ -5,20 +5,19 @@ const register = (user) => {
     email: user.email,
     password: user.password,
     phone: user.phone,
-    subscribed: false,
+    subscribe: user.subscribe,
   };
 
-  let config = {
-    headers: {
-      'Content-Type': 'null'
-    }
-  }
+//  let config = {
+//    headers: {
+//      'Content-Type': 'null'
+//    }
+//  }
 
   axios
     .post(
-      "http://localhost:4000/add-subscriber",
-      data,
-      config)
+      "http://localhost:4000/app/signup",
+      data,)
     .then((res) => {
       console.log(res);
     })

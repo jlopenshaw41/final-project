@@ -66,7 +66,7 @@ const Login = ({
     login(userDetails, setUserAccount, setRedirect);
 
     if (redirect === true) {
-      history.push("/home");
+      history.push("/members");
     }
   };
 
@@ -88,7 +88,7 @@ const Login = ({
           placeholder="password..."
           name="password"
         />
-        <StyledButton type="submit">Login</StyledButton>
+        <StyledButton type="submit" onClick={handleSubmit}>Login</StyledButton>
       </StyledForm>
       <Link to="/register">Not a member? Register here.</Link>
     </Container>

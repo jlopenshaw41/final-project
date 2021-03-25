@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import Navbar from "./components/Navbar";
+//import Navbar from "./components/Navbar";
+import { NavBar } from "./components/navbar/index"
 import Home from "./components/Home";
 import About from "./components/About";
+import EnergyMix from "./components/EnergyMix"
 import Contact from "./components/Contact";
 import Register from "./components/Register";
 import Login from "./components/Login";
@@ -13,16 +15,18 @@ function App() {
 
   const [userDetails, setUserDetails] = useState({
     email: "",
+    phone: "",
+    subscribe: "false",
     password: "",
     confirmPassword: "",
   });
   const [userAccount, setUserAccount] = useState();
   const [redirect, setRedirect] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (event) => {
     setUserDetails({
       ...userDetails,
-      [e.target.name]: e.target.value,
+      [event.target.name]: event.target.value,
     });
   };
 
@@ -30,31 +34,33 @@ function App() {
   //console.log({ userAccount });
 
   return (
+    <>
     <Router>
-      <Navbar />
+      <NavBar />
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/energymix" component={EnergyMix} />
         <Route exact path="/about" component={About} />
         <Route exact path="/contact" component={Contact} />
         <Route
             exact
             path="/login"
             render={() => (
-            <Login handleChange={handleChange} userDetails={userDetails} />
-            )}
-            />
-          <Route
-          exact
-          path="/register"
-          render={() => (
-            <Register
+            <Login               
               handleChange={handleChange}
               userDetails={userDetails}
               setUserAccount={setUserAccount}
               userAccount={userAccount}
               setRedirect={setRedirect}
               redirect={redirect}
-            /> 
+            />
+            )}
+            />
+          <Route
+          exact
+          path="/register"
+          render={() => (
+            <Register handleChange={handleChange} userDetails={userDetails} />
           )}
           />
           <Route
@@ -70,6 +76,7 @@ function App() {
         />
       </Switch>
     </Router>
+    </>
   );
 }
 
