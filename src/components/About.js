@@ -10,7 +10,7 @@ const About = () => {
         height: "90vh",
       }}
     >
-      <h1>About</h1>
+      <h1>About Carbon-Lo</h1>
     </div>
   );
 };
