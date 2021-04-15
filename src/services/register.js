@@ -8,7 +8,7 @@ const register = (user) => {
 
   axios
     .post(
-      "https://carbon-lo.herokuapp.com/",
+      "https://carbon-lo.herokuapp.com/add-subscriber",
       data,)
     .then((res) => {
       console.log(res);
