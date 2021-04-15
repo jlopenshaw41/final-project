@@ -16,7 +16,7 @@ const LinksWrapper = styled.ul`
   display: flex;
   height: 100%;
   list-style: none;
-  background-color: #fff;
+  background-color: #F5F7F3;
   width: 100%;
   flex-direction: column;
   position: fixed;
@@ -28,8 +28,8 @@ const LinkItem = styled.li`
   width: 100%;
   padding: 0 1.1em;
   color: #222;
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: 700;
+  font-size: 25px;
   display: flex;
 
   margin-bottom: 10px;
@@ -53,7 +53,6 @@ export function MobileNavLinks(props) {
         <MenuToggle isOpen={isOpen} toggle={() => setOpen(!isOpen)} />
         {isOpen && (
             <LinksWrapper>
-              <LinkItem><NavLink to="/energymix">Energy Mix</NavLink></LinkItem>
               <LinkItem><NavLink to="/about">About</NavLink></LinkItem>
               <LinkItem><NavLink to="/contact">Contact</NavLink></LinkItem>
               <Marginer />

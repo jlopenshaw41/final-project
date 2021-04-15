@@ -4,22 +4,29 @@ import { Link } from "react-router-dom";
 import register from "../services/register";
 
 const StyledButton = styled(Link)`
-border-radius: 4px;
-background: #427314;
-padding: 10px 22px;
-color #fff;
-border: none;
-outline: none;
-cursor: pointer;
-transition: all 0.2s ease-in-out;
-text-decoration: none;
+  border: 0;
+  outline: 0;
+  padding: 2px 1em;
+  color: #222;
+  font-size: 25px;
+  font-weight: 700;
+  border-radius: 20px;
+  font-family: "Amatic SC";
+  text-decoration: none;
+  background-color: #F5F7F3;
+  border: 2px solid #36AB9C;
+  transition: all 240ms ease-in-out;
+  cursor: pointer;
 
-&:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #427314;
-}
-`;
+  &:hover {
+  color: #fff;
+  background-color: #36AB9C;
+  }
+
+  &:not(:last-of-type) {
+  margin-right: 7px;
+  }
+  `;
 
 const StyledForm = styled.form`
   display: flex;
@@ -33,11 +40,11 @@ const StyledForm = styled.form`
 const StyledInput = styled.input`
 display: block;
 width: 100%;
-padding: 10px 15px;
-background-color: #F8F8F8;
+padding: 20px 15px;
+background-color: #F5F7F3;
 border-radius: 8px;
-transition: 0.4s;
-margin-bottom: 5px;
+border: 2px solid #36AB9C;
+margin-bottom: 30px;
 `;
 
 const Container = styled.div`
@@ -49,60 +56,37 @@ const Container = styled.div`
   margin: auto;
 `;
 
-const Register = ({ handleChange, userDetails }) => {
-  const { password, confirmPassword } = userDetails;
-
+const Register = ({ handleChange, userDetails, setUserDetails }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    if (password === confirmPassword) {
-      console.log("passwords match");
-      register(userDetails);
-    }
+    register(userDetails);
+    setUserDetails({
+      email: "",
+      phone: "",
+    })
   };
   return (
     <Container>
-      <h2>Register</h2>
+      <h2>Subscribe and say hello to Carbon-Lo washing cycles</h2>
       <StyledForm action="submit" onSubmit={handleSubmit}>
         <StyledInput
           onChange={handleChange}
           type="email"
-          required
+          required="true"
           placeholder="email..."
           name="email"
+          value={userDetails.email}
         />
         <StyledInput
           onChange={handleChange}
           type="phone"
-          required
+          required="true"
           placeholder="phone...."
           name="phone"
+          value={userDetails.phone}
         />
-        <StyledInput
-          onChange={handleChange}
-          type="password"
-          required
-          placeholder="password..."
-          name="password"
-        />
-        <StyledInput
-          onChange={handleChange}
-          type="password"
-          required
-          placeholder="confirm password..."
-          name="confirmPassword"
-        />
-        <StyledInput
-          onChange={handleChange}
-          type="checkbox"
-          required
-          placeholder="subscribe"
-          name="subscribe"
-          value="true"
-        />
-        <StyledButton type="submit" onClick={handleSubmit}>Register</StyledButton>
+        <StyledButton type="submit" onClick={handleSubmit}>Hello Carbon-Lo!</StyledButton>
       </StyledForm>
-      <Link to="/login">Already a member? Login here.</Link>
     </Container>
   );
 };

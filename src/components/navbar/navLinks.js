@@ -44,7 +44,6 @@ export function NavLinks(props) {
     return (
       <NavLinksContainer>
         <LinksWrapper>
-            <LinkItem><NavLink to="/energymix">Energy Mix</NavLink></LinkItem>
             <LinkItem><NavLink to="/about">About</NavLink></LinkItem>
             <LinkItem><NavLink to="/contact">Contact</NavLink></LinkItem>
         </LinksWrapper>

@@ -10,13 +10,14 @@ const AccessibilityContainer = styled.div`
 const Button = styled.button`
     border: 0;
     outline: 0;
-    padding: 8px 1em;
+    padding: 2px 1em;
     color: #222;
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 25px;
+    font-weight: 700;
     border-radius: 20px;
+    font-family: "Amatic SC";
     text-decoration: none;
-    background-color: #A6A6A6;
+    background-color: #F5F7F3;
     border: 2px solid #36AB9C;
     transition: all 240ms ease-in-out;
     cursor: pointer;
@@ -35,13 +36,13 @@ const NavLink = styled(Link)`
   text-decoration: none;
   color: inherit;
   font-size: inherit;
+  font-family: inherit;
 `;
 
 export function Accessibility(props) {
     return (
       <AccessibilityContainer>
-        <Button><NavLink to="/register">Register</NavLink></Button>
-        <Button><NavLink to="/login">Login</NavLink></Button>
+        <Button><NavLink to="/register">Energy in my Pocket!</NavLink></Button>
       </AccessibilityContainer>
     );
   }

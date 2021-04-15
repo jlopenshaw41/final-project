@@ -3,20 +3,12 @@ import axios from "axios";
 const register = (user) => {
   const data = {
     email: user.email,
-    password: user.password,
     phone: user.phone,
-    subscribe: user.subscribe,
   };
-
-//  let config = {
-//    headers: {
-//      'Content-Type': 'null'
-//    }
-//  }
 
   axios
     .post(
-      "http://localhost:4000/app/signup",
+      "https://carbon-lo.herokuapp.com/",
       data,)
     .then((res) => {
       console.log(res);

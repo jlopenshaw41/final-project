@@ -10,7 +10,7 @@ import { MobileNavLinks } from "./mobileNavLinks";
 const NavbarContainer = styled.div`
     width: 100%;
     height: 60px;
-    box-shadow: 0 1px 3px rgba(15, 15, 15, 0.13);
+    box-shadow: 0 1px 3px #36AB9C;
     display: flex;
     align-items: center;
     padding: 0 1.5em;
@@ -24,7 +24,7 @@ const MiddleSection = styled.div`
     display: flex;
     flex: 2;
     height: 100%;
-    justify-content: center;
+    justify-content: left;
 `;
 
 const RightSection = styled.div`

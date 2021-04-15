@@ -9,8 +9,8 @@ const LogoWrapper = styled.div`
 `;
 
 const LogoImg = styled.div`
-  width: 29px;
-  height: 29px;
+  width: 50px;
+  height: 50px;
 
   img {
     width: 100%;
@@ -18,13 +18,13 @@ const LogoImg = styled.div`
   }
 `;
 
-const LogoText = styled.h2`
-  font-size: 25px;
-  margin: 0;
-  margin-left: 4px;
-  color: #222;
-  font-weight: 700;
-`;
+//const LogoText = styled.h2`
+//  font-size: 25px;
+//  margin: 0;
+//  margin-left: 4px;
+//  color: #222;
+//  font-weight: 700;
+//`;
 
 export function Logo(props) {
     return (
@@ -33,7 +33,6 @@ export function Logo(props) {
           <img src={leafLogo} alt="Carbon-Lo logo"/>
           </Link>
         </LogoImg>
-        <LogoText>Carbon-Lo</LogoText>
       </LogoWrapper>
     );
   }
