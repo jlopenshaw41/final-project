@@ -12,10 +12,10 @@ const Button = styled.button`
     outline: 0;
     padding: 2px 1em;
     color: #222;
-    font-size: 25px;
-    font-weight: 700;
+    font-size: 1.3em;
+    font-weight: 300;
     border-radius: 20px;
-    font-family: "Amatic SC";
+    font-family: "Montserrat";
     text-decoration: none;
     background-color: #F5F7F3;
     border: 2px solid #36AB9C;

@@ -19,25 +19,27 @@ const Main = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 60px;
 `;
 
 const LastUpdated = styled.div`
   display: flex;
   justify-content: center;
-  width: 50vw;
-  font-size: 2rem;
+  font-size: 1.8rem;
 
   @media only screen and (max-width: 750px) {
     font-size: 1rem;
+    width: 80vw;
   }
 `;
 
 const StyledPara = styled.p`
-  margin: 15px 0px 0px 0px;
+  margin: 20px 0px 0px 0px;
 `;
 
 const CreditText = styled.h3`
-  margin: 5px;
+  margin: 20px;
+  font-weight: 300;
 
 @media only screen and (max-width: 750px) {
     font-size: 0.7rem;
@@ -115,14 +117,13 @@ const EnergyMix = () => {
             responsive: true,
             maintainAspectRatio: false,
             legend: {
-              display: true,
-              position: "bottom",
-              align: "start",
+              display: false,
+              position: "left",
+              align: "center",
               labels: {
                 fontColor: "black",
                 fontSize: 20,
-                fontFamily: "Amatic SC",
-                fontStyle: "bold",
+                fontFamily: "Montserrat",
                 padding: 10,
               },
             },

@@ -14,10 +14,14 @@ const NavbarContainer = styled.div`
     display: flex;
     align-items: center;
     padding: 0 1.5em;
+    position: fixed;
+    top: 0;
+    background-color: #F5F7F3;
 `;
 
 const LeftSection = styled.div`
     display: flex;
+    margin-right: 10px;
 `;
 
 const MiddleSection = styled.div`

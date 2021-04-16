@@ -18,9 +18,8 @@ const LinksWrapper = styled.ul`
 
 const LinkItem = styled.li`
   height: 100%;
-  padding: 0 1.1em;
+  padding: 0 1.2rem;
   color: #222;
-  font-weight: 700;
   font-size: 25px;
   align-items: center;
   justify-content: center;
@@ -38,6 +37,7 @@ const NavLink = styled(Link)`
   text-decoration: none;
   color: inherit;
   font-size: inherit;
+  font-weight: 400;
 `;
 
 export function NavLinks(props) {

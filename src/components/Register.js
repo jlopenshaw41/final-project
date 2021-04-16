@@ -9,9 +9,9 @@ const StyledButton = styled(Link)`
   padding: 2px 1em;
   color: #222;
   font-size: 25px;
-  font-weight: 700;
+  font-weight: 300;
   border-radius: 20px;
-  font-family: "Amatic SC";
+  font-family: "Montserrat";
   text-decoration: none;
   background-color: #F5F7F3;
   border: 2px solid #36AB9C;
@@ -56,6 +56,11 @@ const Container = styled.div`
   margin: auto;
 `;
 
+const StyledH2 = styled.h2`
+  text-align: center;
+  font-weight: 400;
+`;
+
 const Register = ({ handleChange, userDetails, setUserDetails }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -67,7 +72,7 @@ const Register = ({ handleChange, userDetails, setUserDetails }) => {
   };
   return (
     <Container>
-      <h2>Subscribe and say hello to Carbon-Lo washing cycles</h2>
+      <StyledH2>Subscribe to SMS alerts and say hello to Carbon-Lo washing cycles</StyledH2>
       <StyledForm action="submit" onSubmit={handleSubmit}>
         <StyledInput
           onChange={handleChange}
