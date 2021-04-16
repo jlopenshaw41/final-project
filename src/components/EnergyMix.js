@@ -36,6 +36,14 @@ const StyledPara = styled.p`
   margin: 15px 0px 0px 0px;
 `;
 
+const CreditText = styled.h3`
+  margin: 5px;
+
+@media only screen and (max-width: 750px) {
+    font-size: 0.7rem;
+  }
+`;
+
 const EnergyMix = () => {
   const [chartData, setChartData] = useState({});
 
@@ -96,10 +104,10 @@ const EnergyMix = () => {
         <StyledPara>Last updated: </StyledPara>
         <StyledPara id="time"></StyledPara>
       </LastUpdated>
-      <h3>
+      <CreditText>
         Data provided by{" "}
         <a href="https://www.reactive.energy/">Reactive Energy </a>
-      </h3>
+      </CreditText>
       <Chartcontainer>
         <Doughnut
           data={chartData}
