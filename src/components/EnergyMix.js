@@ -10,6 +10,9 @@ const Chartcontainer = styled.div`
   align-items: center;
   width: 700px;
   height: 700px;
+  position: relative;
+  height: 40vh;
+  width: 80vw;
 `;
 
 
