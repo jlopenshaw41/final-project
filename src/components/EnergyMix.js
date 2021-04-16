@@ -117,12 +117,12 @@ const EnergyMix = () => {
             responsive: true,
             maintainAspectRatio: false,
             legend: {
-              display: false,
-              position: "left",
+              display: true,
+              position: "bottom",
               align: "center",
               labels: {
                 fontColor: "black",
-                fontSize: 20,
+                fontSize: 16,
                 fontFamily: "Montserrat",
                 padding: 10,
               },

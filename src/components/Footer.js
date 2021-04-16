@@ -9,7 +9,7 @@ const Footercontainer = styled.div`
     bottom: 0px;
     width: 100%;
     z-index: 2;
-    padding: 15px;
+    padding: 9px;
   `;
 
   const Flexrow = styled.div`

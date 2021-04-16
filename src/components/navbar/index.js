@@ -17,6 +17,7 @@ const NavbarContainer = styled.div`
     position: fixed;
     top: 0;
     background-color: #F5F7F3;
+    z-index: 2;
 `;
 
 const LeftSection = styled.div`
