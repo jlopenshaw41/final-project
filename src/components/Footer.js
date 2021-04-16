@@ -4,25 +4,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faYoutube, faFacebook, faTwitter, faInstagram, faGithub  } from "@fortawesome/free-brands-svg-icons";
 
 const Footercontainer = styled.div`
-    margin-top: 1rem;
-    padding: 1rem;
     background-color: #F5F7F3;
     position: fixed;
-    bottom: 0;
-    left: 0;
+    bottom: 20px;
     width: 100%;
   `;
 
   const Flexrow = styled.div`
   display: flex;
-  align-items: center;
-  margin-top: 50px;
-  margin-left: 50px;
+  justify-content: center;
+  width: 100%;
   `;
 
 
 const Flexsocialmedia = styled.div`
-    text-align: right;
+    text-align: center;
     width: 100%;
     `;
 
