@@ -37,9 +37,10 @@ function App() {
             <Register handleChange={handleChange} userDetails={userDetails} setUserDetails={setUserDetails}/>
           )}
           />
-      </Switch>
+        </Switch> 
+      <Footer/>
     </Router>
-    <Footer/>
+    
     </>
   );
 }
