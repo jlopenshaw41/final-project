@@ -12,6 +12,10 @@ const Chartcontainer = styled.div`
   height: 70vh;
   width: 90vw;
   margin-bottom: 200px;
+
+  @media only screen and (max-width: 750px) {
+    width: 75vw;
+  }
 `;
 
 const Main = styled.div`
