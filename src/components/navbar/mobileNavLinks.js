@@ -28,7 +28,7 @@ const LinkItem = styled.li`
   width: 100%;
   padding: 0 1.1em;
   color: #222;
-  font-weight: 700;
+  font-weight: 300;
   font-size: 25px;
   display: flex;
 

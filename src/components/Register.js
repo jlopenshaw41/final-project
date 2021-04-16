@@ -18,6 +18,10 @@ const StyledButton = styled(Link)`
   transition: all 240ms ease-in-out;
   cursor: pointer;
 
+  @media only screen and (max-width: 750px) {
+    font-size: 1rem;
+  }
+
   &:hover {
   color: #fff;
   background-color: #36AB9C;
@@ -35,6 +39,10 @@ const StyledForm = styled.form`
   align-items: center;
   width: 50%;
   margin: auto;
+
+  @media only screen and (max-width: 750px) {
+    width: 100%;
+  }
 `;
 
 const StyledInput = styled.input`
@@ -54,11 +62,17 @@ const Container = styled.div`
   align-items: center;
   width: 50%;
   margin: auto;
+  margin-top: 60px;
 `;
 
 const StyledH2 = styled.h2`
   text-align: center;
   font-weight: 400;
+  
+  @media only screen and (max-width: 750px) {
+    font-size: 1rem;
+    width: 80vw;
+  }
 `;
 
 const Register = ({ handleChange, userDetails, setUserDetails }) => {

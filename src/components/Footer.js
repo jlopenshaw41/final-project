@@ -6,8 +6,10 @@ import { faYoutube, faFacebook, faTwitter, faInstagram, faGithub  } from "@forta
 const Footercontainer = styled.div`
     background-color: #F5F7F3;
     position: fixed;
-    bottom: 20px;
+    bottom: 0px;
     width: 100%;
+    z-index: 2;
+    padding: 15px;
   `;
 
   const Flexrow = styled.div`
