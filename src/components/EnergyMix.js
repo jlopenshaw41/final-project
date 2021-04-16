@@ -34,15 +34,27 @@ const LastUpdated = styled.div`
 `;
 
 const StyledPara = styled.p`
-  margin: 20px 0px 0px 0px;
+  margin: 5px 0px 0px 0px;
 `;
 
 const CreditText = styled.h3`
   margin: 20px;
   font-weight: 300;
 
-@media only screen and (max-width: 750px) {
+  @media only screen and (max-width: 750px) {
     font-size: 0.7rem;
+  }
+`;
+
+const CurrentLevel = styled.h2`
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 10px;
+
+  @media only screen and (max-width: 750px) {
+    font-size: 1.1rem;
+    width: 80vw;
   }
 `;
 
@@ -58,6 +70,21 @@ const EnergyMix = () => {
 
         let timeStamp = arrayObj[0][1].lastUpdate.utc;
         document.getElementById("time").innerHTML = timeStamp;
+
+        let currentProportion = Math.floor(
+          (res.data.wind.proportion +
+            res.data.solar.proportion +
+            res.data.biomass.proportion +
+            res.data.hydro.proportion +
+            res.data.nuclear.proportion) *
+            100
+        );
+
+        console.log(currentProportion);
+
+        document.getElementById(
+          "current-level"
+        ).innerHTML = `Current low-carbon energy level: ${currentProportion}%`;
 
         const mergedArrayObj = [].concat.apply([], arrayObj);
 
@@ -102,6 +129,7 @@ const EnergyMix = () => {
 
   return (
     <Main>
+      <CurrentLevel id="current-level"></CurrentLevel>
       <LastUpdated>
         <StyledPara>Last updated: </StyledPara>
         <StyledPara id="time"></StyledPara>
@@ -119,7 +147,7 @@ const EnergyMix = () => {
             legend: {
               display: true,
               position: "bottom",
-              align: "center",
+              align: "left",
               labels: {
                 fontColor: "black",
                 fontSize: 16,
