@@ -36,7 +36,7 @@ const NavLink = styled(Link)`
   text-decoration: none;
   color: inherit;
   font-size: inherit;
-  font-family: inherit;
+  font-family: 'Economica', sans-serif;
 `;
 
 export function Accessibility(props) {

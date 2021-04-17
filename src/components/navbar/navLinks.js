@@ -36,8 +36,9 @@ const LinkItem = styled.li`
 const NavLink = styled(Link)`
   text-decoration: none;
   color: inherit;
-  font-size: inherit;
+  font-size: 2rem;
   font-weight: 400;
+  font-family: 'Economica', sans-serif;
 `;
 
 export function NavLinks(props) {

@@ -29,10 +29,10 @@ const Main = styled.div`
 const LastUpdated = styled.div`
   display: flex;
   justify-content: center;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
 
   @media only screen and (max-width: 750px) {
-    font-size: 1rem;
+    font-size: 0.9rem;
     width: 80vw;
   }
 `;
@@ -41,9 +41,8 @@ const StyledPara = styled.p`
   margin: 5px 0px 0px 0px;
 `;
 
-const CreditText = styled.h3`
+const CreditText = styled.p`
   margin: 20px;
-  font-weight: 300;
 
   @media only screen and (max-width: 750px) {
     font-size: 0.7rem;
@@ -52,12 +51,13 @@ const CreditText = styled.h3`
 
 const CurrentLevel = styled.h2`
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 2.8rem;
   text-align: center;
   margin-bottom: 10px;
+  font-family: 'Economica', sans-serif;
 
   @media only screen and (max-width: 750px) {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     width: 80vw;
   }
 `;
