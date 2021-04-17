@@ -19,7 +19,7 @@ const StyledH1 = styled.h1`
   margin-top: 10px;
 
   @media only screen and (max-width: 750px) {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 `;
 
