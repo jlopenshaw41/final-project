@@ -9,9 +9,8 @@ const StyledButton = styled(Link)`
   padding: 2px 1em;
   color: #222;
   font-size: 25px;
-  font-weight: 300;
   border-radius: 20px;
-  font-family: "Montserrat";
+  font-family: "Economica";
   text-decoration: none;
   background-color: #F5F7F3;
   border: 2px solid #36AB9C;
@@ -19,7 +18,7 @@ const StyledButton = styled(Link)`
   cursor: pointer;
 
   @media only screen and (max-width: 750px) {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   &:hover {
@@ -53,6 +52,10 @@ background-color: #F5F7F3;
 border-radius: 8px;
 border: 2px solid #36AB9C;
 margin-bottom: 30px;
+
+@media only screen and (max-width: 750px) {
+    padding: 10px 15px;
+  }
 `;
 
 const Container = styled.div`
@@ -68,9 +71,10 @@ const Container = styled.div`
 const StyledH2 = styled.h2`
   text-align: center;
   font-weight: 400;
+  font-family: "Economica", sans-serif;
   
   @media only screen and (max-width: 750px) {
-    font-size: 1rem;
+    font-size: 1.4rem;
     width: 80vw;
   }
 `;

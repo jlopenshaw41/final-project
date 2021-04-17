@@ -39,6 +39,7 @@ const NavLink = styled(Link)`
   text-decoration: none;
   color: inherit;
   font-size: inherit;
+  font-family: "Economica", sans-serif;
 `;
 
 const Marginer = styled.div`

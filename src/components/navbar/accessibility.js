@@ -15,7 +15,7 @@ const Button = styled.button`
     font-size: 1.3em;
     font-weight: 300;
     border-radius: 20px;
-    font-family: "Montserrat";
+    font-family: "Economica";
     text-decoration: none;
     background-color: #F5F7F3;
     border: 2px solid #36AB9C;
