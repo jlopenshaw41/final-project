@@ -17,6 +17,7 @@ const StyledH1 = styled.h1`
   font-size: 3rem;
   margin-bottom: 0;
   margin-top: 10px;
+  width: 90%;
 
   @media only screen and (max-width: 750px) {
     font-size: 2.2rem;
